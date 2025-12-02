@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import heroImage from '../assets/iiitu.webp';
 import Faq from './Faq';
+import Elite from './Elite';
 
 const Hero = () => {
     return (
@@ -73,6 +74,7 @@ const Hero = () => {
                     </div>
                 </motion.div>
             </div>
+                    <Elite></Elite>
                     <Faq></Faq>
         </section>
     );
