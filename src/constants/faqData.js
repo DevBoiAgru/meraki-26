@@ -56,7 +56,7 @@ export const faqData = [
     {
         id: 8,
         question: "What are the flagship events?",
-        answer: "Skycircuit showcase , Hack-the-throne , Robo-drive , Robo-Trace are some major attractions. "
+        answer: "Skycircuit showcase, Hack-the-throne, Robo-drive, Robo-Trace are some major attractions."
     },
     {
         id: 9,
