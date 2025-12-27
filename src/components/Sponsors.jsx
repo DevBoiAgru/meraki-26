@@ -19,26 +19,26 @@ import { appleSlideUp, appleScaleIn, sectionTransition } from "../utils/motion";
 import iiituLogo from '../assets/sponsors/iiitu_logo.webp';
 
 /**
- * Sponsor data array.
+ * Partner data array.
  * @constant
- * @type {Array<{name: string, logo: string}>}
+ * @type {Array<{name: string, firm: string, designation: string, logo: string}>}
  */
-const sponsors = [
-  { name: "Sponsor 1", logo: iiituLogo },
-  { name: "Sponsor 2", logo: iiituLogo },
-  { name: "Sponsor 3", logo: iiituLogo },
-  { name: "Sponsor 4", logo: iiituLogo },
-  { name: "Sponsor 5", logo: iiituLogo },
-  { name: "Sponsor 6", logo: iiituLogo },
+const partners = [
+  { name: "Partner 1", firm: "Firm Name", designation: "Designation", logo: iiituLogo },
+  { name: "Partner 2", firm: "Firm Name", designation: "Designation", logo: iiituLogo },
+  { name: "Partner 3", firm: "Firm Name", designation: "Designation", logo: iiituLogo },
+  { name: "Partner 4", firm: "Firm Name", designation: "Designation", logo: iiituLogo },
+  { name: "Partner 5", firm: "Firm Name", designation: "Designation", logo: iiituLogo },
+  { name: "Partner 6", firm: "Firm Name", designation: "Designation", logo: iiituLogo },
 ];
 
 /**
  * Poster frame component styled as wooden picture frame.
  * 
  * @param {Object} props
- * @param {Object} props.sponsor - Sponsor data with name and logo
+ * @param {Object} props.partner - Partner data with name, firm, designation, logo
  * @param {number} props.index - Index for staggered animation delay
- * @returns {JSX.Element} Framed sponsor logo
+ * @returns {JSX.Element} Framed partner logo with details
  * 
  * @styling
  * - Wooden frame: Multi-tone brown gradient with bevel borders
@@ -50,7 +50,7 @@ const sponsors = [
  * - Entry: appleScaleIn with index-based delay
  * - Hover: scale(1.05), y(-8px) with spring physics
  */
-const PosterFrame = ({ sponsor, index }) => {
+const PosterFrame = ({ partner, index }) => {
   return (
     <motion.div
       className="relative cursor-pointer group"
@@ -114,8 +114,8 @@ const PosterFrame = ({ sponsor, index }) => {
           {/* Sponsor Logo */}
           <div className="w-[85%] h-[85%] flex items-center justify-center p-2">
             <img
-              src={sponsor.logo}
-              alt={sponsor.name}
+              src={partner.logo}
+              alt={partner.name}
               className="w-full h-full object-contain drop-shadow-sm"
             />
           </div>
@@ -143,6 +143,17 @@ const PosterFrame = ({ sponsor, index }) => {
           boxShadow: "0 2px 4px rgba(0,0,0,0.5), inset 1px 1px 2px rgba(255,255,255,0.3)",
         }}
       />
+
+      {/* Partner Details Plaque */}
+      <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-4 text-center w-48 z-20">
+
+        <p className="font-terminal text-xs sm:text-sm text-gray-300 mt-1">
+          {partner.firm}
+        </p>
+        <p className="font-terminal text-[10px] sm:text-xs text-cyan-400">
+          {partner.designation}
+        </p>
+      </div>
     </motion.div>
   );
 };
@@ -171,7 +182,7 @@ export default function Sponsors() {
 
   return (
     <section
-      id="sponsors"
+      id="partners"
       ref={sectionRef}
       className="w-full min-h-screen flex flex-col relative overflow-hidden"
       style={{ paddingTop: "var(--navbar-height, 5rem)" }}
@@ -229,7 +240,7 @@ export default function Sponsors() {
               ▶
             </span>
             <h2 className="font-minecraft text-white text-xl sm:text-2xl md:text-4xl tracking-widest uppercase drop-shadow-lg">
-              SPONSORS
+              PARTNERS
             </h2>
           </motion.div>
 
@@ -274,13 +285,13 @@ export default function Sponsors() {
             viewport={{ once: true, amount: 0.1 }}
             className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 md:gap-12 lg:gap-14 max-w-5xl mx-auto px-4"
           >
-            {sponsors.map((sponsor, idx) => (
+            {partners.map((partner, idx) => (
               <motion.div
                 key={idx}
-                className="flex items-center justify-center"
+                className="flex items-center justify-center mb-12" // Added margin bottom for text
                 variants={appleScaleIn(idx * 0.08)}
               >
-                <PosterFrame sponsor={sponsor} index={idx} />
+                <PosterFrame partner={partner} index={idx} />
               </motion.div>
             ))}
           </motion.div>
