@@ -33,7 +33,7 @@ const partners = [
   { name: "Devfolio", firm: "Devfolio", designation: "Platform partner", logo: devfolioLogo },
   { name: "AEROSTAR", firm: "AEROSTAR", designation: "Technology and Innovation Partner", logo: aerostarLogo },
   { name: "Unstop", firm: "Unstop", designation: "Platform Partner", logo: unstopLogo },
-  { name: "Who's Next?", firm: "YOU?", designation: "JOIN US!", logo: whosNextLogo },
+  { name: "Who's Next?", firm: "YOU?", designation: "JOIN US!", logo: whosNextLogo }
 ];
 
 /**
@@ -286,7 +286,7 @@ export default function Sponsors() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.1 }}
-            className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 md:gap-12 lg:gap-14 max-w-5xl mx-auto px-4"
+            className="flex flex-wrap justify-center gap-8 sm:gap-10 md:gap-12 lg:gap-14 max-w-5xl mx-auto px-4"
           >
             {partners.map((partner, idx) => (
               <motion.div
