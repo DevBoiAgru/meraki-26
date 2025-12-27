@@ -135,8 +135,8 @@ function Workshops() {
         {/* 
          * Gradient Blending - Section Transitions
          * 
-         * Top gradient blends from About section (#080808)
-         * Bottom gradient blends to Flagship Event section (#080808)
+         * Top gradient blends from the previous About section (#080808)
+         * Bottom gradient blends to the next FlagshipEvent section (#080808)
          * 
          * @see DOCS.md#gradient-blending
          */}
