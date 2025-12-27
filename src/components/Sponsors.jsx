@@ -17,6 +17,11 @@ import charArt from "../assets/sponsors_character_art.webp";
 import { appleSlideUp, appleScaleIn, sectionTransition } from "../utils/motion";
 
 import iiituLogo from '../assets/sponsors/iiitu_logo.webp';
+import interviewBuddyLogo from '../assets/sponsors/interview_buddy.png';
+import unstopLogo from '../assets/sponsors/unstop_logo.svg';
+import aerostarLogo from '../assets/sponsors/aerostar.png';
+import devfolioLogo from '../assets/sponsors/devfolio_logo.png';
+import whosNextLogo from '../assets/whosNext.png';
 
 /**
  * Partner data array.
@@ -24,12 +29,11 @@ import iiituLogo from '../assets/sponsors/iiitu_logo.webp';
  * @type {Array<{name: string, firm: string, designation: string, logo: string}>}
  */
 const partners = [
-  { name: "Partner 1", firm: "Firm Name", designation: "Designation", logo: iiituLogo },
-  { name: "Partner 2", firm: "Firm Name", designation: "Designation", logo: iiituLogo },
-  { name: "Partner 3", firm: "Firm Name", designation: "Designation", logo: iiituLogo },
-  { name: "Partner 4", firm: "Firm Name", designation: "Designation", logo: iiituLogo },
-  { name: "Partner 5", firm: "Firm Name", designation: "Designation", logo: iiituLogo },
-  { name: "Partner 6", firm: "Firm Name", designation: "Designation", logo: iiituLogo },
+  { name: "InterviewBuddy", firm: "InterviewBuddy", designation: "Silver sponsor", logo: interviewBuddyLogo },
+  { name: "Devfolio", firm: "Devfolio", designation: "Platform partner", logo: devfolioLogo },
+  { name: "AEROSTAR", firm: "AEROSTAR", designation: "Technology and Innovation Partner", logo: aerostarLogo },
+  { name: "Unstop", firm: "Unstop", designation: "Platform Partner", logo: unstopLogo },
+  { name: "Who's Next?", firm: "YOU?", designation: "JOIN US!", logo: whosNextLogo },
 ];
 
 /**
