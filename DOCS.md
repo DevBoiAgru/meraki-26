@@ -414,4 +414,3 @@ If you renamed this component locally, update these files:
 3. **Section IDs:** Currently uses `id="events"` - consider changing to `id="flagship"` for clarity
 
 4. **Data structure:** Still references `isElite` property in event objects. Consider renaming to `isFlagship` for consistency (optional).
-````
