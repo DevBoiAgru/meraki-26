@@ -79,13 +79,13 @@ export const footerCoordinators = [
         phone: "+91 7696897912",
     },
     {
-        name: "Rishav Raj",
-        email: "23241@iiitu.ac.in",
-        phone: "+91 8595055375",
-    },
-    {
         name: "Tanishq Singh",
         email: "23362@iiitu.ac.in",
         phone: "+91 7017488532",
+    },
+    {
+        name: "Rishav Raj",
+        email: "23241@iiitu.ac.in",
+        phone: "+91 8595055375",
     },
 ];
