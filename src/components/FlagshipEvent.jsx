@@ -216,11 +216,11 @@ function FlagshipEvent() {
               onClick={() => navigate(`/event/${activeEvent.slug}`)}
             >
               {/* Full Enclosing Image */}
-              <div className="absolute inset-0 w-full h-full">
+              <div className="absolute inset-0 w-full h-full flex items-center justify-center bg-[#1a1a1a]">
                 <img
                   src={activeEvent.image}
                   alt={activeEvent.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105"
                 />
 
                 {/* Base Overlay - Always visible for text contrast */}
