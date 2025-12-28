@@ -212,7 +212,7 @@ function FlagshipEvent() {
              * No fade animation - content switches immediately for snappy feel
              */}
             <div
-              className="relative z-20 w-full md:w-2/3 bg-[#2a2a2a] border-2 border-[#3a3a3a] rounded-t-lg rounded-b-none md:rounded-l-none md:rounded-r-lg md:rounded-tl-lg mb-0 md:mt-0 md:-ml-[2px] overflow-hidden group cursor-pointer min-h-[320px] xs:min-h-[360px] sm:min-h-[400px] md:min-h-[500px]"
+              className="relative z-20 w-full md:w-2/3 bg-[#2a2a2a] border-2 border-[#3a3a3a] rounded-t-lg rounded-b-none md:rounded-l-none md:rounded-r-lg md:rounded-tl-lg mb-0 md:mt-0 md:-ml-[2px] overflow-hidden group cursor-pointer min-h-[320px] xs:min-h-[360px] sm:min-h-[400px] md:min-h-[450px]"
               onClick={() => navigate(`/event/${activeEvent.slug}`)}
             >
               {/* Full Enclosing Image */}
