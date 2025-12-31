@@ -207,21 +207,13 @@ const Hero = () => {
        * 
        * Each section handles its own scroll-linked animations.
        * Order determines scroll sequence: About → ExpertTalk → FlagshipEvent → Sponsors → FAQ
-       * Wrapped in Suspense for lazy-loading with minimal fallback.
+       * Single Suspense boundary prevents layout shifts from cascading loads.
        */}
-      <Suspense fallback={<div className="min-h-screen bg-black" />}>
+      <Suspense fallback={<SectionLoader />}>
         <About />
-      </Suspense>
-      <Suspense fallback={<div className="min-h-screen bg-black" />}>
         <ExpertTalk />
-      </Suspense>
-      <Suspense fallback={<div className="min-h-screen bg-black" />}>
         <FlagshipEvent />
-      </Suspense>
-      <Suspense fallback={<div className="min-h-screen bg-black" />}>
         <Sponsors />
-      </Suspense>
-      <Suspense fallback={<div className="min-h-screen bg-black" />}>
         <Faq />
       </Suspense>
 
